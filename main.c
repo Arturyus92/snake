@@ -162,14 +162,14 @@ void goTail(struct snake *head) {
 }
 
 /*
- Увеличение хвоста на 1 элемент
+ Увеличение хвоста на 5 элементов
  */
 void addTail(struct snake *head) {
     if(head == NULL || head->tsize>MAX_TAIL_SIZE) {
         mvprintw(0, 0, "Can't add tail");
         return;
     }
-    head->tsize++;
+    head->tsize+=5;
 }
 void printHelp(char *s) {
     mvprintw(0, 0, s);
